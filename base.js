@@ -32,7 +32,6 @@ function getPxmartProd() {
     }
 
     requestTimeout = setTimeout(() => {
-        console.log(`第${pageIndex}頁的請求`)
         let xhr = new XMLHttpRequest();
         let api_url = `https://api-pxbox.es.pxmart.com.tw/app/1.0/spu/get_products?CategoryId=535&SortType=0&PageIndex=${pageIndex}&PageSize=200`;
         xhr.open("GET", api_url, true);
