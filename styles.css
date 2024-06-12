@@ -1,0 +1,110 @@
+
+body, h1, p, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+
+#title {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.product {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px); 
+    max-width: calc(33.333% - 20px);
+    min-width: 200px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.productImg img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: 150px; 
+    object-fit: cover; 
+}
+
+.productName {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #555;
+}
+
+.productPrice {
+    font-size: 0.9em;
+    color: #e91e63;
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(50% - 20px); 
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+#loadingMsg {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    animation: bounce 1s infinite alternate; /* 增加上下跳動的動畫效果 */
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
